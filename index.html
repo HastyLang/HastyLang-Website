@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+
+    <link rel="stylesheet" href="global.css">
+</head>
+<body class="body">
+    <h1 id="stopwatch" style="color: #DDDDDD">
+        Loading...
+    </h1>
+    <script>
+        let time = 0;
+        const timeText = document.getElementById("stopwatch");
+        setInterval(function() {
+            time += 1;
+            timeText.innerHTML = "Seconds elapsed: " + time / 10 + (time % 10 === 0 ? ".0" : "");
+        }, 100);
+    </script>
+</body>
+</html>
